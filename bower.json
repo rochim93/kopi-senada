@@ -1,0 +1,20 @@
+{
+  "name": "laravel-seminar",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Dhimas Akbar N.B <dhimasakbarnoorbaihaque@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AdminLTE": "admin-lte#^2.3.11"
+  }
+}
