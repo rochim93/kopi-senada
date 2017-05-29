@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('index');
-})->name('home.index');
+    return view('page.index');
+})->name('page.index');
+
+Route::get('/register/participant', function () {
+    return view('page.register-kopi');
+})->name('page.register-kopi');
 
 Route::post('/register/participant', 'DashboardController@storeParticipant')->name('register.participant');
 
