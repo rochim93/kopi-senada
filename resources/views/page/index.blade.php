@@ -93,7 +93,7 @@
 
       <!-- CALL TO ACTION BUTTONS -->
       <div class="buttons inpage-scroll">
-        <a href="tentang.html" class="btn btn-primary custom-button red-btn">Tentang KOPI</a>
+        <a href="#" class="btn btn-primary custom-button red-btn">Tentang KOPI</a>
         <a href="/register/participant" class="btn btn-primary custom-button green-btn">Daftar Kopi</a>
       </div>
 
