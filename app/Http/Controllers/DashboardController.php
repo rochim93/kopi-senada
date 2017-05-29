@@ -54,32 +54,32 @@ class DashboardController extends Controller
     {
         // validasi data
         $this->validate($request, array(
-                'fullname'      => 'required',
-                'email'      => 'required',
-                'cell'       => 'required|numeric',
-                'job'      => 'required|max:255',
-                'address'    => 'required',
-                'zip'        => 'required|numeric',
-                'city'       => 'required',
-                'session'    => 'required',
+                'name'          => 'required',
+                'email'         => 'required|string|email|max:255|unique:users',
+                'birth'         => 'required',
+                'address'       => 'required',
+                'institutions'  => 'required',
+                'phone'         => 'required',
+                'gender'        => 'required',
+                'payment'       => 'required'
             ));
 
         $participant = new Participant;
         $participant->id_participant = $this->getParticipantId();
-        $participant->fullname = $request->fullname;
+        $participant->name = $request->name;
         $participant->email = $request->email;
-        $participant->phone = $request->cell;
-        $participant->job = $request->job;
+        $participant->birth = $request->birth;
         $participant->address = $request->address;
-        $participant->zip_code = $request->zip;
-        $participant->city = $request->city;
-        $participant->session = $request->session;
+        $participant->institutions = $request->institutions;
+        $participant->phone = $request->phone;
+        $participant->gender = $request->gender;
+        $participant->payment = $request->payment;
         $participant->save();
 
         // flash messages
         $request->session()->flash('status', 'Registration Success!');
         // redirect ke halaman
-        return redirect()->route('home.index');
+        return redirect()->back();
     }
 
     public function getParticipantId(){
