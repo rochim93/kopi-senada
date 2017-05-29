@@ -51,27 +51,27 @@
                 <tbody><tr>
                   <th>No</th>
                   <th>ID Participant</th>
-                  <th>Full Name</th>
+                  <th>Name</th>
                   <th>Email</th>
-                  <th>Phone</th>
-                  <th>Job</th>
+                  <th>Birth</th>
                   <th>Address</th>
-                  <th>ZIP Code</th>
-                  <th>City</th>
-                  <th>Session</th>
+                  <th>Institutions</th>
+                  <th>Phone</th>
+                  <th>Gender</th>
+                  <th>Payment</th>
                 </tr>
                  @foreach ($participants as $participant)
                 <tr>
                   <td>{{ $participant->id }}</td>
                   <td>{{ $participant->id_participant }}</td>
-                  <td>{{ $participant->fullname }}</td>
+                  <td>{{ $participant->name }}</td>
                   <td>{{ $participant->email }}</td>
-                  <td>{{ $participant->phone }}</td>
-                  <td>{{ $participant->job }}</td>
+                  <td>{{ $participant->birth }}</td>
                   <td>{{ $participant->address }}</td>
-                  <td>{{ $participant->zip_code }}</td>
-                  <td>{{ $participant->city }}</td>
-                  <td>{{ $participant->session }}</td>
+                  <td>{{ $participant->institutions }}</td>
+                  <td>{{ $participant->phone }}</td>
+                  <td>{{ $participant->gender }}</td>
+                  <td>{{ $participant->payment }}</td>
                 </tr>
               @endforeach
               </tbody></table>
